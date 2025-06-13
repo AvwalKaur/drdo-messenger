@@ -7,12 +7,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>DRDO Messenger</h1>
-  <ul id="messages"></ul>
-  <form id="form" action="">
-    <input id="m" autocomplete="off" placeholder="Type your message..." />
-    <button>Send</button>
-  </form>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Online Users</h2>
+      <ul id="users-list" class="users-list"></ul>
+    </aside>
+
+    <main class="chat-area">
+      <ul id="messages" class="messages"></ul>
+      <form id="form" autocomplete="off">
+        <input id="input" placeholder="Type your message..." />
+        <button>Send</button>
+      </form>
+    </main>
+  </div>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="script.js"></script>

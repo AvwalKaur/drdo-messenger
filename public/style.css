@@ -1,51 +1,78 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
   margin: 0;
-  padding: 0;
-  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
 }
 
-h1 {
-  background-color: #004080;
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #003366;
   color: white;
-  padding: 20px 0;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.users-list {
+  list-style: none;
+  padding: 0;
   margin: 0;
+}
+
+.users-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #messages {
-  list-style-type: none;
+  flex-grow: 1;
+  overflow-y: auto;
+  list-style: none;
   padding: 0;
-  max-width: 600px;
-  margin: 20px auto;
-  text-align: left;
+  margin: 0 0 10px 0;
 }
 
 #messages li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  background: #e1f0ff;
+  border-radius: 5px;
 }
 
 form {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   display: flex;
-  background: white;
-  padding: 10px;
-  box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+  gap: 10px;
 }
 
-form input {
+input {
   flex: 1;
   padding: 10px;
-  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-form button {
-  background: #004080;
+button {
+  background-color: #0066cc;
   color: white;
+  padding: 10px 16px;
   border: none;
-  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
 }
