@@ -1,128 +1,51 @@
 body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  background-color: #004080;
   color: white;
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.container {
-  display: flex;
-  flex: 1;
-  width: 100%;
-}
-
-.chat-area {
-  flex: 3;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.chat-area h1 {
-  margin-bottom: 10px;
+  padding: 20px 0;
+  margin: 0;
 }
 
 #messages {
-  flex: 1;
-  overflow-y: auto;
-  background: #ffffff11;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 10px;
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
 }
 
-#messages div {
-  background: #ffffff22;
-  padding: 8px 12px;
-  border-radius: 10px;
-  margin-bottom: 8px;
+#messages li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 form {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
 }
 
 form input {
   flex: 1;
   padding: 10px;
-  border: none;
-  border-radius: 8px 0 0 8px;
-  outline: none;
+  font-size: 16px;
 }
 
 form button {
-  padding: 10px 15px;
-  border: none;
-  background: #fff;
-  color: #2575fc;
-  border-radius: 0 8px 8px 0;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.user-panel {
-  flex: 1;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
-  border-left: 2px solid rgba(255,255,255,0.1);
-  overflow-y: auto;
-}
-
-.user-panel h3 {
-  margin-top: 0;
-}
-
-#user-list {
-  list-style: none;
-  padding: 0;
-}
-
-#user-list li {
-  background: #ffffff22;
-  margin-bottom: 5px;
-  padding: 6px;
-  border-radius: 6px;
-}
-
-/* Login Overlay */
-.overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(6px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.login-box {
-  background: white;
-  color: #222;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.login-box input {
-  padding: 10px;
-  width: 80%;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #aaa;
-  border-radius: 8px;
-}
-
-.login-box button {
-  padding: 10px 20px;
-  background: #2575fc;
+  background: #004080;
   color: white;
   border: none;
-  border-radius: 8px;
-  font-weight: bold;
+  padding: 10px 20px;
   cursor: pointer;
 }
